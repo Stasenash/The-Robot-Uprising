@@ -41,6 +41,7 @@ public class RoomTransition : MonoBehaviour
             case "Bathroom":
                 nva.enabled = false;
                 robot.transform.position = new Vector3(-903.0f, 0.1f, 170.0f); nva.enabled = true;
+                robot.transform.localScale *= 1.3f;
                 break;
             case "MainRoom":
                 nva.enabled = false;
@@ -48,6 +49,7 @@ public class RoomTransition : MonoBehaviour
                 {
                     case "Bathroom":
                         robot.transform.position = new Vector3(-7.6f, 0.1f, 5.1f);
+                        robot.transform.localScale /= 1.3f;
                         break;
                     case "Bedroom":
                         robot.transform.position = new Vector3(6.0f, 0.1f, 5.2f);
@@ -69,7 +71,7 @@ public class RoomTransition : MonoBehaviour
             case "Bedroom":
                 nva.enabled = false;
                 robot.transform.position = new Vector3(230.0f, 0.1f, 158.0f);
-                robot.transform.localScale *= 1.3f; 
+                robot.transform.localScale *= 1.3f;
                 nva.enabled = true;
                 break;
             case "Door":;break;//переход на катсцену ивентов при условии
