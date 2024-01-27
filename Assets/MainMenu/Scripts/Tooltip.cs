@@ -18,7 +18,7 @@ public class Tooltip : MonoBehaviour
 	public float speed = 10; // скорость плавного затухания и проявления
 
 	private GameObject robot;
-	public Camera _camera;
+	//public Camera _camera;
 
 	private Color BGColorFade;
 	private Color textColorFade;
@@ -42,7 +42,7 @@ public class Tooltip : MonoBehaviour
 		if (tooltipMode == ProjectMode.Tooltip3D)
 		{
 			RaycastHit hit;
-			Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+			Ray ray = GetCamera().ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit))
 			{
 				if (hit.transform.GetComponent<ToolTipText>())
@@ -66,5 +66,14 @@ public class Tooltip : MonoBehaviour
 			boxText.transform.position = pos;
 			boxText.color = Color.Lerp(boxText.color, textColorFade, speed * Time.deltaTime);
 		}
+	}
+
+	Camera GetCamera()
+	{
+		if (GameObject.Find("Bathroom Camera") != null) return GameObject.Find("Bathroom Camera").GetComponent<Camera>();
+		if (GameObject.Find("Bedroom Camera") != null) return GameObject.Find("Bedroom Camera").GetComponent<Camera>();
+		if (GameObject.Find("Kitchen Camera") != null) return GameObject.Find("Kitchen Camera").GetComponent<Camera>();
+		if (GameObject.Find("MainRoom Camera") != null) return GameObject.Find("MainRoom Camera").GetComponent<Camera>();
+		return null;
 	}
 }

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 24340229}
   - component: {fileID: 24340228}
   - component: {fileID: 24340227}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Soap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,111 +437,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.6875, y: 4, z: 9.75}
   m_LocalScale: {x: 8.625, y: 8, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &38490617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 38490621}
-  - component: {fileID: 38490620}
-  - component: {fileID: 38490619}
-  - component: {fileID: 38490618}
-  m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &38490618
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38490617}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &38490619
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38490617}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &38490620
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38490617}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &38490621
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38490617}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 230.05, y: 6.1, z: 158.19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1391,7 +1286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2af4acce97a45ab468e9aafd6053049e, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2af4acce97a45ab468e9aafd6053049e, type: 3}
       propertyPath: m_TagString
@@ -2265,7 +2160,7 @@ GameObject:
   - component: {fileID: 311809997}
   - component: {fileID: 311809996}
   - component: {fileID: 311809995}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall Z+ (9)
   m_TagString: Wall Z+
   m_Icon: {fileID: 0}
@@ -2447,7 +2342,7 @@ GameObject:
   - component: {fileID: 328356000}
   - component: {fileID: 328355999}
   - component: {fileID: 328355998}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Bedroom Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2514,7 +2409,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 75
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2540,14 +2435,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328355997}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13088542, y: -0.8681629, z: 0.31598538, w: 0.3596048}
-  m_LocalPosition: {x: 239.211, y: 11, z: 158.7947}
+  m_LocalRotation: {x: 0.1464466, y: -0.8535535, z: 0.35355338, w: 0.35355338}
+  m_LocalPosition: {x: 235, y: 11, z: 158.7947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 342185374}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 40, y: -135, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: -135, z: 0}
 --- !u!1 &342185373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,7 +2453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342185374}
   - component: {fileID: 342185375}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3162,7 +3057,6 @@ MonoBehaviour:
   tooltipMode: 0
   boxText: {fileID: 1493567835}
   speed: 10
-  _camera: {fileID: 963194227}
 --- !u!114 &389830599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3241,7 +3135,7 @@ GameObject:
   - component: {fileID: 397962959}
   - component: {fileID: 397962958}
   - component: {fileID: 397962957}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall X- (4)
   m_TagString: Wall X-
   m_Icon: {fileID: 0}
@@ -4530,7 +4424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5efeffcea8211c041901b0fe6367c17e, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5efeffcea8211c041901b0fe6367c17e, type: 3}
       propertyPath: m_TagString
@@ -4990,7 +4884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4441eca656736e044b3792122c69fcbe, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4441eca656736e044b3792122c69fcbe, type: 3}
       propertyPath: m_TagString
@@ -5058,7 +4952,7 @@ GameObject:
   - component: {fileID: 644493553}
   - component: {fileID: 644493552}
   - component: {fileID: 644493551}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Wall X- (5)
   m_TagString: Wall X-
   m_Icon: {fileID: 0}
@@ -5381,7 +5275,7 @@ GameObject:
   - component: {fileID: 673684727}
   - component: {fileID: 673684726}
   - component: {fileID: 673684725}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Wall Z- (1)
   m_TagString: Wall Z-
   m_Icon: {fileID: 0}
@@ -5723,6 +5617,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3e5ed33ea7ee04488fe7eda3bf01260, type: 3}
       insertIndex: -1
       addedObject: {fileID: 685209487}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3e5ed33ea7ee04488fe7eda3bf01260, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685209492}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3e5ed33ea7ee04488fe7eda3bf01260, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 685209491}
   m_SourcePrefab: {fileID: 100100000, guid: e3e5ed33ea7ee04488fe7eda3bf01260, type: 3}
 --- !u!1 &685209485 stripped
 GameObject:
@@ -5768,6 +5668,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fridge: {fileID: 685209485}
+--- !u!114 &685209491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685209485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ee4310bec907d47ad2ec87bd6eccab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
+  name: R0-6OT
+--- !u!114 &685209492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685209485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d920a24713a4245a4bd0cc0f981662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: "\u0425\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A"
 --- !u!1001 &686760249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6132,7 +6059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739527414}
   - component: {fileID: 739527413}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Spot Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6484,7 +6411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba0ddd32843feba4cabfcfe8f1e713c5, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba0ddd32843feba4cabfcfe8f1e713c5, type: 3}
       propertyPath: m_TagString
@@ -6651,7 +6578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d63b89cee797aa84a805486d9f6c7d94, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7078,7 +7005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b40529615a31c1344a3d01aaa1bee3a1, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b40529615a31c1344a3d01aaa1bee3a1, type: 3}
       propertyPath: m_TagString
@@ -7984,7 +7911,7 @@ GameObject:
   - component: {fileID: 1083333811}
   - component: {fileID: 1083333813}
   - component: {fileID: 1083333812}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8057,7 +7984,7 @@ GameObject:
   - component: {fileID: 1102599106}
   - component: {fileID: 1102599105}
   - component: {fileID: 1102599104}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Wall Z+ (11)
   m_TagString: Wall Z+
   m_Icon: {fileID: 0}
@@ -8160,7 +8087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1122987923}
   - component: {fileID: 1122987922}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8256,7 +8183,7 @@ GameObject:
   - component: {fileID: 1158528707}
   - component: {fileID: 1158528706}
   - component: {fileID: 1158528705}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Wall Z+ (12)
   m_TagString: Wall Z+
   m_Icon: {fileID: 0}
@@ -8361,7 +8288,7 @@ GameObject:
   - component: {fileID: 1167969540}
   - component: {fileID: 1167969539}
   - component: {fileID: 1167969538}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall Z-
   m_TagString: Wall Z-
   m_Icon: {fileID: 0}
@@ -10782,7 +10709,7 @@ GameObject:
   - component: {fileID: 1628233608}
   - component: {fileID: 1628233607}
   - component: {fileID: 1628233606}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall Z+ (8)
   m_TagString: Wall Z+
   m_Icon: {fileID: 0}
@@ -11195,7 +11122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b40529615a31c1344a3d01aaa1bee3a1, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b40529615a31c1344a3d01aaa1bee3a1, type: 3}
       propertyPath: m_TagString
@@ -11398,7 +11325,7 @@ GameObject:
   - component: {fileID: 1673135772}
   - component: {fileID: 1673135771}
   - component: {fileID: 1673135770}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Wall Z+ (10)
   m_TagString: Wall Z+
   m_Icon: {fileID: 0}
@@ -11650,7 +11577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eeb5215ad0bacf745993ef7465c3a9bc, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: eeb5215ad0bacf745993ef7465c3a9bc, type: 3}
       propertyPath: m_TagString
@@ -11727,7 +11654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fe911d0bc7279674097a24333d2105de, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12129,7 +12056,7 @@ GameObject:
   - component: {fileID: 1831103117}
   - component: {fileID: 1831103116}
   - component: {fileID: 1831103115}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall Z+ (7)
   m_TagString: Wall Z+
   m_Icon: {fileID: 0}
@@ -12814,7 +12741,7 @@ GameObject:
   - component: {fileID: 1925932753}
   - component: {fileID: 1925932752}
   - component: {fileID: 1925932751}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Near Wall X-
   m_Icon: {fileID: 0}
@@ -13197,7 +13124,7 @@ GameObject:
   - component: {fileID: 1978022811}
   - component: {fileID: 1978022810}
   - component: {fileID: 1978022809}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Wall X+ (9)
   m_TagString: Wall X+
   m_Icon: {fileID: 0}
@@ -13637,7 +13564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4a96484e4bf5e74f8e97ae4d1d0cbac, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4a96484e4bf5e74f8e97ae4d1d0cbac, type: 3}
       propertyPath: m_TagString
@@ -13910,7 +13837,7 @@ GameObject:
   - component: {fileID: 2033725657}
   - component: {fileID: 2033725656}
   - component: {fileID: 2033725655}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Near Wall X+
   m_Icon: {fileID: 0}
@@ -14146,7 +14073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fb364c202fbb7704cad84192eb14304b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14446,7 +14373,7 @@ GameObject:
   - component: {fileID: 2120562529}
   - component: {fileID: 2120562528}
   - component: {fileID: 2120562527}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Wall X-
   m_Icon: {fileID: 0}
@@ -14711,7 +14638,7 @@ GameObject:
   - component: {fileID: 2146604680}
   - component: {fileID: 2146604679}
   - component: {fileID: 2146604678}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Wall X+ (8)
   m_TagString: Wall X+
   m_Icon: {fileID: 0}
@@ -14907,4 +14834,3 @@ SceneRoots:
   - {fileID: 389830601}
   - {fileID: 161207065}
   - {fileID: 99548631}
-  - {fileID: 38490621}
