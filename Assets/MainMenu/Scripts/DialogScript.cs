@@ -48,7 +48,7 @@ public class DialogScript : MonoBehaviour
             {
                 var distance = Vector3.Distance(hit.transform.position, robot.transform.position);
                 Debug.Log(distance);
-                if (hit.transform.GetComponent<ItemClicked>() && distance < 1.5)
+                if (hit.transform.GetComponent<ItemClicked>() && distance < 4)
                 {
                     text = hit.transform.GetComponent<ItemClicked>().text;
                     name = hit.transform.GetComponent<ItemClicked>().name;
