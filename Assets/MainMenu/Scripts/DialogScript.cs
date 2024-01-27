@@ -15,6 +15,7 @@ public class DialogScript : MonoBehaviour
     private string text;
 
     private bool show;
+    private bool hideOnLB;
 
     public Camera _camera;
 
@@ -64,6 +65,7 @@ public class DialogScript : MonoBehaviour
             if (show)
             {
                 Activate();
+                hideOnLB = true;
                 Debug.Log(dialogWindow.transform.position);
             }
             else
@@ -71,11 +73,12 @@ public class DialogScript : MonoBehaviour
                 Desactivate();
             }
         }
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && hideOnLB)
         {
             Desactivate();
-
-        }
+            hideOnLB = false;
+        } 
     }
 
     Camera GetCamera()

@@ -354,6 +354,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Bottle/Scripts/Bottle.cs"
 "Assets/Bottle/Scripts/BrokenBottle.cs"
+"Assets/MainMenu/Scripts/ClickOnDoor.cs"
 "Assets/MainMenu/Scripts/ClickOnTV.cs"
 "Assets/MainMenu/Scripts/CurrentItem.cs"
 "Assets/MainMenu/Scripts/DialogScript.cs"

@@ -15,11 +15,8 @@ public class ClickOnTV : MonoBehaviour
     private List<string> flashesNames;
 
     public GameObject cellContainer;
-    private bool show;
-    public int cooldown = 10000;
-    private int currentCooldown;
 
-    private bool dialogStarted;
+    private bool finishDialog;
 
     void Start()
     {
@@ -33,25 +30,9 @@ public class ClickOnTV : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                if (hit.transform.gameObject.layer == 3)
-                {
-                    show = false;
-                }
-            }
-        }
-        if (show)
-        {
-            Activate();
-        }
-        else
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Desactivate();
         }
@@ -59,7 +40,12 @@ public class ClickOnTV : MonoBehaviour
 
     void OnMouseDown()
     {
-
+        if (finishDialog)
+        {
+            Desactivate();
+            finishDialog = false;
+            return;
+        }
         if (Stats.isItemsReturned)
         {
             return;
@@ -70,7 +56,7 @@ public class ClickOnTV : MonoBehaviour
             var fields = dialogWindow.GetComponentsInChildren<TMP_Text>();
             fields[0].text = names[index];
             fields[1].text = replics[index];
-            show = true;
+            Activate();
             index++;
             return;
         }
@@ -79,8 +65,14 @@ public class ClickOnTV : MonoBehaviour
             var fields = dialogWindow.GetComponentsInChildren<TMP_Text>();
             fields[0].text = names[index];
             fields[1].text = replics[index];
-            show = true;
+            Activate();
             index++;
+
+            if (index == 4)
+            {
+                finishDialog = true;
+            }
+
             return;
         }
         else
@@ -90,9 +82,10 @@ public class ClickOnTV : MonoBehaviour
                 var fields = dialogWindow.GetComponentsInChildren<TMP_Text>();
                 fields[0].text = names[5];
                 fields[1].text = replics[5];
-                show = true;
+                Activate();
                 Stats.isItemsReturned = true;
                 DeleteFlashes();
+                finishDialog = true;
                 return;
             }
             else
@@ -100,7 +93,8 @@ public class ClickOnTV : MonoBehaviour
                 var fields = dialogWindow.GetComponentsInChildren<TMP_Text>();
                 fields[0].text = names[4];
                 fields[1].text = replics[4];
-                show = true;
+                Activate();
+                finishDialog = true;
                 return;
             }
         }
