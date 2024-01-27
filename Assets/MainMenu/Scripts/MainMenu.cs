@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         }
         if (renderer.tag == "StartGame")
         {
-            SceneManager.LoadScene("Stage1");
+            SceneManager.LoadScene(1);
         }
     }
 }

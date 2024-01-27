@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 #pragma warning disable 0169, 0414, anyothernumber
 
 public class CameraMovement : MonoBehaviour

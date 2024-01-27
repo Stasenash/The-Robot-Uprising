@@ -24,12 +24,13 @@ public class DialogScript : MonoBehaviour
     {
         robot = GameObject.Find("Banana Man");
         dialogWindow = GameObject.Find("Dialog");
+        Debug.Log(dialogWindow.transform.position);
         Desactivate();
     }
 
     public static void Activate()
     {
-        dialogWindow.transform.position = new Vector3(546, 115, 0); //переделать на новом месте
+        dialogWindow.transform.position = new Vector3(644, 140, 0); //переделать на новом месте
     }
 
     public static void Desactivate()
@@ -43,12 +44,13 @@ public class DialogScript : MonoBehaviour
         {
             show = false;
             RaycastHit hit;
-            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+            Camera camera = GetCamera();
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
                 var distance = Vector3.Distance(hit.transform.position, robot.transform.position);
                 Debug.Log(distance);
-                if (hit.transform.GetComponent<ItemClicked>() && distance < 4)
+                if (hit.transform.GetComponent<ItemClicked>() && distance < 10)
                 {
                     text = hit.transform.GetComponent<ItemClicked>().text;
                     name = hit.transform.GetComponent<ItemClicked>().name;
@@ -74,5 +76,14 @@ public class DialogScript : MonoBehaviour
             Desactivate();
 
         }
+    }
+
+    Camera GetCamera()
+    {
+        if (GameObject.Find("Bathroom Camera") != null) return GameObject.Find("Bathroom Camera").GetComponent<Camera>();
+        if (GameObject.Find("Bedroom Camera") != null) return GameObject.Find("Bedroom Camera").GetComponent<Camera>();
+        if (GameObject.Find("Kitchen Camera") != null) return GameObject.Find("Kitchen Camera").GetComponent<Camera>();
+        if (GameObject.Find("MainRoom Camera") != null) return GameObject.Find("MainRoom Camera").GetComponent<Camera>();
+        return null;
     }
 }

@@ -42,7 +42,8 @@ public class Tooltip : MonoBehaviour
 		if (tooltipMode == ProjectMode.Tooltip3D)
 		{
 			RaycastHit hit;
-			Ray ray = GetCamera().ScreenPointToRay(Input.mousePosition);
+			Camera camera = GetCamera();
+			Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit))
 			{
 				if (hit.transform.GetComponent<ToolTipText>())
@@ -58,12 +59,12 @@ public class Tooltip : MonoBehaviour
 
 		if (show || isUI)
 		{
-			boxText.transform.position = pos;
+			boxText.transform.position = new Vector3(pos.x + 150, pos.y, pos.z);
 			boxText.color = Color.Lerp(boxText.color, textColor, speed * Time.deltaTime);
 		}
 		else
 		{
-			boxText.transform.position = pos;
+			boxText.transform.position = new Vector3(pos.x + 150, pos.y, pos.z);
 			boxText.color = Color.Lerp(boxText.color, textColorFade, speed * Time.deltaTime);
 		}
 	}

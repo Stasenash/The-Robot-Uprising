@@ -356,6 +356,7 @@
 "Assets/Bottle/Scripts/BrokenBottle.cs"
 "Assets/MainMenu/Scripts/CurrentItem.cs"
 "Assets/MainMenu/Scripts/DialogScript.cs"
+"Assets/MainMenu/Scripts/IntroWait.cs"
 "Assets/MainMenu/Scripts/InventoryScript.cs"
 "Assets/MainMenu/Scripts/Item.cs"
 "Assets/MainMenu/Scripts/ItemBehavior.cs"
