@@ -5,15 +5,13 @@ using UnityEngine;
 public class Stats : MonoBehaviour
 {
     public static string ActiveItem;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Event1
+    public static bool isEventActive;
+    public static bool isFlash1;
+    public static bool isFlash2;
+    public static bool isFlash3;
+    public static bool isFlash4;
+    public static bool isItemsReturned;
+    // Event2
+    // Other
 }
