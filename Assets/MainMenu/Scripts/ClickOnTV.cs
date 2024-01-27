@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ClickOnTV : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class ClickOnTV : MonoBehaviour
     public string[] replics;
     public string[] names;
 
+    private List<string> flashesNames;
+
+    public GameObject cellContainer;
     private bool show;
     public int cooldown = 10000;
     private int currentCooldown;
@@ -20,6 +24,12 @@ public class ClickOnTV : MonoBehaviour
     void Start()
     {
         dialogWindow = GameObject.Find("Dialog");
+        cellContainer = GameObject.Find("InventoryPanel");
+        flashesNames = new List<string>();
+        flashesNames.Add("Flash1");
+        flashesNames.Add("bookcaseClosedWide");
+        flashesNames.Add("toiletSquare");
+        flashesNames.Add("bedDouble");
     }
 
     // Update is called once per frame
@@ -31,7 +41,6 @@ public class ClickOnTV : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
-                Debug.Log(hit.transform.gameObject.layer);
                 if (hit.transform.gameObject.layer == 3)
                 {
                     show = false;
@@ -50,9 +59,7 @@ public class ClickOnTV : MonoBehaviour
 
     void OnMouseDown()
     {
-        //show = false;
-        Debug.Log("Here!");
-        Debug.Log(show);
+
         if (Stats.isItemsReturned)
         {
             return;
@@ -85,6 +92,7 @@ public class ClickOnTV : MonoBehaviour
                 fields[1].text = replics[5];
                 show = true;
                 Stats.isItemsReturned = true;
+                DeleteFlashes();
                 return;
             }
             else
@@ -107,5 +115,23 @@ public class ClickOnTV : MonoBehaviour
     void Desactivate()
     {
         dialogWindow.transform.position = new Vector3(-1000, -1000, -1000);
+    }
+
+    void DeleteFlashes()
+    {
+        for (int i = 0; i < cellContainer.transform.childCount; i++)
+        {
+            Transform cell = cellContainer.transform.GetChild(i);
+            var cellItem = cellContainer.transform.GetComponent<CurrentItem>();
+            Image img = cellContainer.transform.GetComponent<Image>();
+            Debug.Log(flashesNames);
+            if (flashesNames.Contains(cell.name))
+            {
+                img.sprite = null;
+                img.enabled = false;
+                cellContainer.transform.GetChild(i).name = "Cell" + i;
+                img.color = new Color(img.color.r, img.color.g, img.color.b, 0.2f);
+            }
+        }
     }
 }

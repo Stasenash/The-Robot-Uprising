@@ -51,7 +51,7 @@ public class CameraMovement : MonoBehaviour
 			}
 		}
 
-		Debug.Log(roomName + " walls went up");
+		//Debug.Log(roomName + " walls went up");
 	}
 
     // Update is called once per frame
@@ -114,8 +114,8 @@ public class CameraMovement : MonoBehaviour
 				{
 					if (obj.layer == LayerMask.NameToLayer(roomName))
 					{
-						Debug.Log(obj.layer);
-						Debug.Log(LayerMask.NameToLayer(roomName));
+						//Debug.Log(obj.layer);
+						//Debug.Log(LayerMask.NameToLayer(roomName));
 						obj.transform.position -= new Vector3(0, objectsMoveSpeed, 0);
 					}
 				}
@@ -124,8 +124,8 @@ public class CameraMovement : MonoBehaviour
 				{
 					if (obj.layer == LayerMask.NameToLayer(roomName))
 					{
-						Debug.Log(obj.layer);
-						Debug.Log(LayerMask.NameToLayer(roomName));
+						//Debug.Log(obj.layer);
+						//Debug.Log(LayerMask.NameToLayer(roomName));
 						obj.transform.position += new Vector3(0, objectsMoveSpeed, 0);
 					}
 				}
