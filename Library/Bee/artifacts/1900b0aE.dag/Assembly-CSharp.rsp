@@ -360,6 +360,7 @@
 "Assets/MainMenu/Scripts/ClickOnMan.cs"
 "Assets/MainMenu/Scripts/ClickOnStove.cs"
 "Assets/MainMenu/Scripts/ClickOnTV.cs"
+"Assets/MainMenu/Scripts/ClickOnVacuum.cs"
 "Assets/MainMenu/Scripts/ClickOnWash.cs"
 "Assets/MainMenu/Scripts/CurrentItem.cs"
 "Assets/MainMenu/Scripts/DialogScript.cs"

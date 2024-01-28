@@ -76,7 +76,8 @@ public class RoomTransition : MonoBehaviour
                 break;
             case "Door":;break;//переход на катсцену ивентов при условии
         }
-
+        var audio = gameObject.GetComponent<AudioSource>();
+        audio.Play();
         currentCamera.SetActive(false);
         newCamera.SetActive(true);
 	}
