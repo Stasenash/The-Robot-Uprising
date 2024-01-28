@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    public static string ActiveItem;
+
+    public static string ActiveItemName;
+    public static Sprite ActiveItemSprite;
     // Event1
     public static bool isEventActive;
     public static bool isFlash1;

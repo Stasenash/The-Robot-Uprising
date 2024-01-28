@@ -76,6 +76,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\My Assets\AverageManPack\Scripts\maxCamera.cs" />
+    <Compile Include="Assets\MainMenu\Scripts\ClickOnStove.cs" />
+    <Compile Include="Assets\MainMenu\Scripts\ClickOnWash.cs" />
+    <Compile Include="Assets\MainMenu\Scripts\ClickOnMan.cs" />
     <Compile Include="Assets\SimpleSkeleton\script\SimpleSkeletonController.cs" />
     <Compile Include="Assets\Scripts\StartScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -116,6 +119,7 @@
     <Compile Include="Assets\SoftEffects\Scripts\ClassExtensions.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\SoftEffects\Scripts\CGHolder.cs" />
+    <Compile Include="Assets\MainMenu\Scripts\ImItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\MainMenu\Scripts\RobotWalking.cs" />
     <Compile Include="Assets\SoftEffects\Scripts\Styles.cs" />

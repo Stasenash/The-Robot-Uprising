@@ -54,7 +54,6 @@ public class ClickOnBooks : MonoBehaviour
 
     public void Activate()
     {
-        Debug.Log("aktive");
         dialogWindow.transform.position = new Vector3(644, 140, 0); //переделать на новом месте
     }
 

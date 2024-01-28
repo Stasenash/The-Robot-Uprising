@@ -8,33 +8,117 @@ public class CurrentItem : MonoBehaviour, IPointerClickHandler
 {
     public GameObject cellContainer;
     public int Index;
-    public string activeItemName;
     private List<string> cells;
+
+    private string activeItemName;
+    private Sprite activeItemSprite;
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("pointer");
+        Debug.Log(Stats.ActiveItemName);
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             if (cellContainer.transform.GetChild(Index) != null)
             {
-                activeItemName = cellContainer.transform.GetChild(Index).name;
-                if (cells.Contains(activeItemName))
-                {
-                    return;
-                }
+                var activeItemC = cellContainer.transform.GetChild(Index);
+                var activeItemCopy = activeItemC.GetComponent<Image>();
+                activeItemName = activeItemCopy.name;
+                activeItemSprite = activeItemCopy.sprite;
                 //взаимодействие с другими предметами
-                if (Stats.ActiveItem != null)
+                if (Stats.ActiveItemName != null)
                 {
+                    if (Stats.ActiveItemName == activeItemName)
+                    {
+                        Stats.ActiveItemName = null;
+                        Stats.ActiveItemSprite = null;
+                        cellContainer.transform.GetChild(Index).GetComponent<Image>().color = new Color(255, 255, 255, 1f);
+                        return;
+                    }
+                    CheckInteractions();
                     activeItemName = null;
-                    Stats.ActiveItem = null;
-                    cellContainer.transform.GetChild(Index).GetComponent<Image>().color = Color.white;
+                    activeItemName = null;
+                    Stats.ActiveItemName = null;
+                    Stats.ActiveItemSprite = null;
+                    cellContainer.transform.GetChild(Index).GetComponent<Image>().color = new Color (255,255,255,0.2f);
                 }
                 else
                 {
                     cellContainer.transform.GetChild(Index).GetComponent<Image>().color = Color.red;
-                    Stats.ActiveItem = activeItemName;
+                    Stats.ActiveItemName = activeItemName;
+                    Stats.ActiveItemSprite = activeItemSprite;
                 }
             }
+        }
+    }
+    void CheckInteractions()
+    {
+        Debug.Log(Stats.ActiveItemName);
+        switch(Stats.ActiveItemName)
+        {
+            case "kettle":
+                if (activeItemName == "kitchenCabinetUpperLow") 
+                {
+                    for (int i = 0; i < cellContainer.transform.childCount; i++)
+                    {
+                        Transform cell = cellContainer.transform.GetChild(i);
+                        Image img = cell.GetComponent<Image>();
+                        if (cell.name.Contains("Cell"))
+                        {
+                            img.enabled = true;
+                            img.sprite = Stats.ActiveItemSprite;
+                            cellContainer.transform.GetChild(i).name = "kettleWithBeans";
+                            img.color = new Color(255f, 255f, 255f, 1f);
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < cellContainer.transform.childCount; i++)
+                    {
+                        Transform cell = cellContainer.transform.GetChild(i);
+                        Image img = cell.GetComponent<Image>();
+                        if (cell.name == "kettle" || cell.name == "kitchenCabinetUpperLow")
+                        {
+                            img.sprite = null;
+                            Stats.ActiveItemSprite = null;
+                            Stats.ActiveItemName = null;
+                            cellContainer.transform.GetChild(i).name = "Cell" + i;
+                            img.color = new Color(255f, 255f, 255f, 0.2f);
+                        }
+                    }
+                    Stats.kettleWithBeans = true;
+                } ;break;
+            case "kitchenCabinetUpperLow":
+                if (activeItemName == "kettle")
+                {
+                    for (int i = 0; i < cellContainer.transform.childCount; i++)
+                    {
+                        Transform cell = cellContainer.transform.GetChild(i);
+                        Image img = cell.GetComponent<Image>();
+                        if (cell.name.Contains("Cell"))
+                        {
+                            img.enabled = true;
+                            img.sprite = Stats.ActiveItemSprite;
+                            cellContainer.transform.GetChild(i).name = "kettleWithBeans";
+                            img.color = new Color(255f, 255f, 255f, 1f);
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < cellContainer.transform.childCount; i++)
+                    {
+                        Transform cell = cellContainer.transform.GetChild(i);
+                        Image img = cell.GetComponent<Image>();
+                        if (cell.name == "kettle" || cell.name == "kitchenCabinetUpperLow")
+                        {
+                            img.sprite = null;
+                            Stats.ActiveItemSprite = null;
+                            Stats.ActiveItemName = null;
+                            cellContainer.transform.GetChild(i).name = "Cell" + i;
+                            img.color = new Color(255f, 255f, 255f, 0.2f);
+                        }
+                    }
+                    Stats.kettleWithBeans = true;
+                }; break;
+            default:break;
         }
     }
 
@@ -50,21 +134,4 @@ public class CurrentItem : MonoBehaviour, IPointerClickHandler
         cellContainer = GameObject.Find("InventoryPanel");
     }
 
-    void DeleteItem()
-    {
-        cellContainer.transform.GetChild(Index).GetComponent<Image>().sprite = null;
-        cellContainer.transform.GetChild(Index).GetComponent<Image>().name = "Cell" + Index;
-    }
-
-    void AddItem()
-    {
-
-        //идем по cellContainer и ищем первую ячейку с названием Селл+i
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

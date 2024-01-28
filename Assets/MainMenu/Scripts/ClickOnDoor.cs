@@ -40,6 +40,10 @@ public class ClickOnDoor : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+        if (Stats.bottleGasOnMan)
+        {
+            SceneManager.LoadScene(5);
+        }
         else 
         {
             var fields = dialogWindow.GetComponentsInChildren<TMP_Text>();

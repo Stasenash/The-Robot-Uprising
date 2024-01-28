@@ -55,7 +55,7 @@ public class InventoryScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100))
             {
                 var distance = Vector3.Distance(hit.transform.position, robot.transform.position);
-                if (hit.collider.GetComponent<Item>() && distance < 5)
+                if (hit.collider.GetComponent<Item>() && distance < 10)
                 {
                     Debug.Log(hit.collider.GetComponent<Item>().name);
                     for (int i = 0; i < items.Count; i++)
@@ -101,7 +101,6 @@ public class InventoryScript : MonoBehaviour
             else
             {
                 img.sprite = null;
-                img.enabled = false;
                 cellContainer.transform.GetChild(i).name = "Cell" + i;
                 img.color = new Color(img.color.r, img.color.g, img.color.b, 0.2f);
             }
@@ -116,6 +115,8 @@ public class InventoryScript : MonoBehaviour
             case "bookcaseClosedWide": Stats.isFlash2 = true; break;
             case "toiletSquare": Stats.isFlash3 = true; break;
             case "bedDouble": Stats.isFlash4 = true; break;
+            case "kettle": Stats.tookKettle = true; break;
+            case "kitchenCabinetUpperLow": Stats.tookBeans = true; break;
         }
     }
 }
