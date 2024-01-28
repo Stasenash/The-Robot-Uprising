@@ -15,7 +15,7 @@ public class IntroWait : MonoBehaviour
     IEnumerator WaitForLevel()
     {
         yield  return new WaitForSeconds(waitSec);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(stage);
     }
 
     private void Update()
