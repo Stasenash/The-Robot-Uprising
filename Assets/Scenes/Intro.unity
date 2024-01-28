@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitSec: 45
+  stage: 2
 --- !u!1 &1397532979
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class IntroWait : MonoBehaviour
 {
     public int waitSec;
+    public int stage;
     void Start()
     {
        StartCoroutine(WaitForLevel());
@@ -21,7 +22,7 @@ public class IntroWait : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(stage);
         }
     }
 }
