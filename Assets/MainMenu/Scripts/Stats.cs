@@ -13,5 +13,15 @@ public class Stats : MonoBehaviour
     public static bool isFlash4;
     public static bool isItemsReturned;
     // Event2
+    public static bool tookBeans;
+    public static bool tookKettle;
+    public static bool kettleWithBeans;
+    public static bool kettleOnStove;
+    public static bool bottleWithBeans;
+    public static bool bottleOnWash;
+    public static bool bottleGas;
+    public static bool bottleGasOnMan;
+
+
     // Other
 }
